@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>ruipereira.pythondocs</string>
+	<key>connections</key>
+	<dict>
+		<key>1742A77E-92E3-4D6B-BA7D-15BFA81D33E4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>032B01BE-2628-450A-8629-0440686A5269</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F3B91942-2A94-4FF3-ACB6-2B33A020B23B</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Rebuild Python documentation index</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E0CE46E8-F6AE-4EDA-8650-4E2A56DE7796</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Show function definition</string>
+			</dict>
+		</array>
+		<key>583C97BC-E5C4-4CDA-BC3E-FADFD6844FD2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>032B01BE-2628-450A-8629-0440686A5269</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F3B91942-2A94-4FF3-ACB6-2B33A020B23B</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Rebuild Python3 documentation index</string>
+			</dict>
+		</array>
+		<key>E0CE46E8-F6AE-4EDA-8650-4E2A56DE7796</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6CC9A27D-738F-4A8A-8A3F-86C84D8EFF2E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>F3B91942-2A94-4FF3-ACB6-2B33A020B23B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>53B748D2-5CB0-4EE1-AC64-FCF43BCF4D12</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Rui Pereira</string>
+	<key>description</key>
+	<string>Search Python documentation with suggestions and define functions</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Python Documentation</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>py</string>
+				<key>runningsubtext</key>
+				<string>Building documentation index...</string>
+				<key>script</key>
+				<string>/usr/bin/python pydocs.py 2 "{query}"</string>
+				<key>subtext</key>
+				<string>Search Python documentation</string>
+				<key>title</key>
+				<string>Python documentation</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1742A77E-92E3-4D6B-BA7D-15BFA81D33E4</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>032B01BE-2628-450A-8629-0440686A5269</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>/usr/bin/python pydocs.py "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F3B91942-2A94-4FF3-ACB6-2B33A020B23B</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Python documentation</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>53B748D2-5CB0-4EE1-AC64-FCF43BCF4D12</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>py3</string>
+				<key>runningsubtext</key>
+				<string>Building documentation index...</string>
+				<key>script</key>
+				<string>/usr/bin/python pydocs.py 3 "{query}"</string>
+				<key>subtext</key>
+				<string>Search Python3 documentation</string>
+				<key>title</key>
+				<string>Python3 documentation</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>583C97BC-E5C4-4CDA-BC3E-FADFD6844FD2</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>query=$(echo "{query}" | sed 's:.*\#::')
+echo $query &gt; define.txt
+echo $query | tr -d '\n' 
+</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E0CE46E8-F6AE-4EDA-8650-4E2A56DE7796</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>tell application "Alfred 2" to search "py {query}"</string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>6CC9A27D-738F-4A8A-8A3F-86C84D8EFF2E</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>032B01BE-2628-450A-8629-0440686A5269</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>1742A77E-92E3-4D6B-BA7D-15BFA81D33E4</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>53B748D2-5CB0-4EE1-AC64-FCF43BCF4D12</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+		<key>583C97BC-E5C4-4CDA-BC3E-FADFD6844FD2</key>
+		<dict>
+			<key>ypos</key>
+			<real>170</real>
+		</dict>
+		<key>6CC9A27D-738F-4A8A-8A3F-86C84D8EFF2E</key>
+		<dict>
+			<key>ypos</key>
+			<real>230</real>
+		</dict>
+		<key>E0CE46E8-F6AE-4EDA-8650-4E2A56DE7796</key>
+		<dict>
+			<key>ypos</key>
+			<real>230</real>
+		</dict>
+		<key>F3B91942-2A94-4FF3-ACB6-2B33A020B23B</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://git.io/rui</string>
+</dict>
+</plist>
